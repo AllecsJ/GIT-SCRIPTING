@@ -1,7 +1,7 @@
 #!/bin/bash
 
-            username=("alex Jackson") #username
-            email=("alex_jackson@jmmb.com") #emaill 
+            username=("fname lname") #username
+            email=("fnamelname@domain.com") #emaill 
 
             git config --global user.name $username 
 
@@ -26,8 +26,8 @@ csv_file="svn-sample-30.csv"
             repo_name=${repo_name//$'\r'}
             repo_git="$repo_name.git"
 
-            URL=("http://monaco:9000/svn/$repo_name") #paste repository here
-            remoteOrigin=("https://gitlab.jmmb.com/alex-final-tests/$repo_git") #paste remote origin here
+            URL=("http://snv_Repo/svn/$repo_name") #paste repository here
+            remoteOrigin=("https://gitlab.domain/repo-group/$repo_git") #paste remote origin here
 
 
             git svn clone -r1:HEAD --no-minimize-url --stdlayout --no-metadata --authors-file MainAuthors.txt $URL --trunk="trunk" --branches="branches/" --tags="tags/"
